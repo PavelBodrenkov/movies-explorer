@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3916e858-af31-4901-b61e-b991f75f6ffc" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/frontend/src/containers/CommentsVideo/CommentVideo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/containers/CommentsVideo/CommentVideo.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/containers/SendComment/SendComment.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/containers/SendComment/SendComment.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/forms/ShowFilmForm/ShowFilmForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/forms/ShowFilmForm/ShowFilmForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/ShowFilm/ShowFilm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/ShowFilm/ShowFilm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/services/http/comments/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/services/http/comments/index.ts" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2AGCVyTHCC6cvDZodM47FSuoajS" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="ts.external.directory.path" value="C:\Users\Pavel\Desktop\movies-explorer\frontend\node_modules\typescript\lib" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3916e858-af31-4901-b61e-b991f75f6ffc" name="Changes" comment="" />
+      <created>1654626562426</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1654626562426</updated>
+      <workItem from="1654626564332" duration="2892000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

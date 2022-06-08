@@ -12,6 +12,8 @@ import {
   removeDisLike,
   removeLike,
 } from "../../services/http/movies";
+import {createComments} from "../../services/http/comments";
+import {log} from "util";
 
 const ShowFilm = observer(() => {
   //@ts-ignore
@@ -19,7 +21,8 @@ const ShowFilm = observer(() => {
   const { id } = useParams<{ id: string }>();
   const [film, setFilm] = useState<any>({});
   const [play, setPlay] = useState<boolean>(false)
-  const [volume, setVolum] = useState<number>(0)
+  const [volume, setVolume] = useState<number>(0)
+  const [commentValue, setCommentValue] = useState<string>('')
 
   useEffect(() => {
     if (id) {
@@ -77,7 +80,23 @@ const ShowFilm = observer(() => {
     if (isNaN(value)) {
       return;
     }
-    setVolum(value)
+    setVolume(value)
+  }
+
+  const handleValueComment = (value:string) => {
+    console.log(value)
+    setCommentValue(value)
+  }
+
+  const saveComment = () => {
+    createComments(commentValue, film._id)
+        .then((res) => {
+          if (id) {
+            getMovie(id).then((movie) => {
+              setFilm(movie.data);
+            });
+          }
+        })
   }
 
   return (
@@ -91,6 +110,8 @@ const ShowFilm = observer(() => {
         handleVolume={handleVolume}
         volume={volume}
         play={play}
+        handleValueComment={handleValueComment}
+        saveComment={saveComment}
       />
       <Footer />
     </>
