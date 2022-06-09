@@ -1,46 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fdd09b83-c041-4b61-b1be-3763bc367557" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/src/hooks/GetFilms.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/store/ShowMovieStore.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/types/moviesTypes.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/types/userTypes.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend_mongoDB/src/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend_mongoDB/src/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend_mongoDB/src/auth/auth.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend_mongoDB/src/auth/auth.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend_mongoDB/src/auth/auth.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend_mongoDB/src/auth/auth.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend_mongoDB/src/auth/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend_mongoDB/src/auth/auth.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend_mongoDB/src/auth/jwt-auth.guard.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend_mongoDB/src/auth/jwt-auth.guard.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend_mongoDB/src/comment/comment.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend_mongoDB/src/comment/comment.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend_mongoDB/src/comment/comment.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend_mongoDB/src/comment/comment.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend_mongoDB/src/comment/comment.schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend_mongoDB/src/comment/comment.schema.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend_mongoDB/src/comment/comment.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend_mongoDB/src/comment/comment.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend_mongoDB/src/comment/dto/create-comment.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend_mongoDB/src/comment/dto/create-comment.dto.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend_mongoDB/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend_mongoDB/src/main.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend_mongoDB/src/movies/dto/create-movies.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend_mongoDB/src/movies/dto/create-movies.dto.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend_mongoDB/src/movies/movie.schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend_mongoDB/src/movies/movie.schema.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend_mongoDB/src/movies/movies.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend_mongoDB/src/movies/movies.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend_mongoDB/src/movies/movies.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend_mongoDB/src/movies/movies.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend_mongoDB/src/movies/movies.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend_mongoDB/src/movies/movies.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend_mongoDB/src/users/dto/create-user.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend_mongoDB/src/users/dto/create-user.dto.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend_mongoDB/src/users/user.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend_mongoDB/src/users/user.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend_mongoDB/src/users/user.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend_mongoDB/src/users/user.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend_mongoDB/src/users/user.schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend_mongoDB/src/users/user.schema.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend_mongoDB/src/users/user.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend_mongoDB/src/users/user.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Footer/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Footer/Footer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/containers/CardFilm/CardFilm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/containers/CardFilm/CardFilm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/containers/ListFilms/ListFilms.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/containers/ListFilms/ListFilms.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/forms/AccountForm/AccountForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/forms/AccountForm/AccountForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Films/Films.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Films/Films.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/SaveFilms/SaveFilms.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/SaveFilms/SaveFilms.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/ShowFilm/ShowFilm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/ShowFilm/ShowFilm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/services/helpers/axios.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/services/helpers/axios.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/services/http/movies/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/services/http/movies/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/store/MoviesStore.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/store/MoviesStore.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/yarn.lock" afterDir="false" />
-    </list>
+    <list default="true" id="fdd09b83-c041-4b61-b1be-3763bc367557" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -79,7 +40,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1654755079115</updated>
-      <workItem from="1654755080399" duration="11858000" />
+      <workItem from="1654755080399" duration="11978000" />
     </task>
     <servers />
   </component>
