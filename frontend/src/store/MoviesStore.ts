@@ -1,4 +1,8 @@
-import { makeAutoObservable } from "mobx";
+import {makeAutoObservable} from "mobx";
+import {useContext} from "react";
+import {Context} from "../index";
+
+
 
 export default class MoviesStore {
     private _films: any[];
@@ -7,43 +11,43 @@ export default class MoviesStore {
     private _count: number;
 
     constructor() {
-      
-      this._films = []
-      this._saveFilms = []
-      this._isLoading = false
+
+        this._films = []
+        this._saveFilms = []
+        this._isLoading = false
         this._count = 0
         makeAutoObservable(this)
     }
 
-    setCount (num:number) {
+    setCount(num: number) {
         this._count = num
     }
 
-    setIsLoading(bool:boolean) {
+    setIsLoading(bool: boolean) {
         this._isLoading = bool
     }
 
-    setFilms (arr:any[]) {
-        this._films  = arr
+    setFilms(arr: any[]) {
+        this._films = arr
     }
 
-    setSaveFilms (arr:any[]) {
+    setSaveFilms(arr: any[]) {
         this._saveFilms = arr
     }
 
-    get films () {
+    get films() {
         return this._films
     }
 
-    get saveFilms () {
+    get saveFilms() {
         return this._saveFilms
     }
 
-    get isLoading () {
+    get isLoading() {
         return this._isLoading
     }
 
-    get count () {
+    get count() {
         return this._count
     }
 }

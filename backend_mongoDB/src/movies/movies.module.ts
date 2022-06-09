@@ -12,17 +12,13 @@ import { CommentModule } from 'src/comment/comment.module';
 @Module({
   providers: [MoviesService],
   controllers: [MoviesController],
-  imports:[
-    MongooseModule.forFeature([{name: Movie.name, schema:MovieSchema}]),
-    MongooseModule.forFeature([{name: User.name, schema:UserSchema}]),
-    MongooseModule.forFeature([{name: Comment.name, schema:CommentSchema}]),
+  imports: [
+    MongooseModule.forFeature([{ name: Movie.name, schema: MovieSchema }]),
+    MongooseModule.forFeature([{ name: User.name, schema: UserSchema }]),
+    MongooseModule.forFeature([{ name: Comment.name, schema: CommentSchema }]),
     forwardRef(() => AuthModule),
     UserModule,
-    
-],
-exports:[
-    MoviesService,
-    MoviesModule
-],
+  ],
+  exports: [MoviesService, MoviesModule],
 })
 export class MoviesModule {}

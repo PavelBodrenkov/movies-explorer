@@ -10,7 +10,6 @@ import MoreMovies from "../../components/UI/MoreMovies/MoreMovies"
 const ListFilms: FC<any> = observer(({
     submitSaveMovie,
     films,
-    isMovieAdded,
     flag,
     moreMovie
 }) => {
@@ -34,7 +33,6 @@ const ListFilms: FC<any> = observer(({
                                             key={card._id}
                                             card={card}
                                             submitSaveMovie={submitSaveMovie}
-                                            isMovieAdded={isMovieAdded}
                                             flag={flag}
                                         />
                                     )

@@ -25,12 +25,12 @@ const AcountForm = observer(() => {
             accountStore.setEdit(false)
             accountStore.setResult(null)
             authStore.setUser(response.data)
-            message.success('Данные сохранены')
+            message.success('Данные сохранены').then()
         })
         .catch((e) => {
             if(e?.response?.status === 409) {
                 accountStore.setResult({result:'error'})
-                message.error('Пользователь с таким Email существует')
+                message.error('Пользователь с таким Email существует').then()
             } else {
                 console.log('account' + ' ' + e);
                 

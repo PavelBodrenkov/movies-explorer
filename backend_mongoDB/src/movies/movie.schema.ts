@@ -28,8 +28,8 @@ export class Movie {
   @Prop({ type: String, required: [true, 'Поле обязательно для заполнения'] })
   trailer: string;
 
-  @Prop({ type: Number, required: [true, 'Поле обязательно для заполнения'] })
-  owner: number;
+  @Prop({ type: String, required: [true, 'Поле обязательно для заполнения'] })
+  owner: string;
 
   @Prop({ type: Number, required: [true, 'Поле обязательно для заполнения'] })
   movieId: number;
