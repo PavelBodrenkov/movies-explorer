@@ -36,6 +36,13 @@ export class MoviesService {
     const movie = await this.movieModel
       .findById({ _id: id })
       .populate('comments');
+    //     {
+    //   path: 'comments',
+    //   populate: {
+    //     path: 'children',
+    //     model: 'Comment',
+    //   },
+    // });
     return movie;
   }
 
@@ -85,41 +92,45 @@ export class MoviesService {
 
   async addLike(req: any) {
     const { id } = req.params;
-    const movie = await this.movieModel.findByIdAndUpdate(
-      id,
-      { $addToSet: { likes: req.user._id } },
-      { new: true },
-    );
+    const movie = await this.movieModel
+      .findByIdAndUpdate(
+        id,
+        { $addToSet: { likes: req.user._id } },
+        { new: true },
+      )
+      .populate('comments');
     return movie;
   }
 
   async deleteLike(req: any) {
     const { id } = req.params;
-    const movie = await this.movieModel.findByIdAndUpdate(
-      id,
-      { $pull: { likes: req.user._id } },
-      { new: true },
-    );
+    const movie = await this.movieModel
+      .findByIdAndUpdate(id, { $pull: { likes: req.user._id } }, { new: true })
+      .populate('comments');
     return movie;
   }
 
   async addDisLike(req: any) {
     const { id } = req.params;
-    const movie = await this.movieModel.findByIdAndUpdate(
-      id,
-      { $addToSet: { disLikes: req.user._id } },
-      { new: true },
-    );
+    const movie = await this.movieModel
+      .findByIdAndUpdate(
+        id,
+        { $addToSet: { disLikes: req.user._id } },
+        { new: true },
+      )
+      .populate('comments');
     return movie;
   }
 
   async deleteDisLike(req: any) {
     const { id } = req.params;
-    const movie = await this.movieModel.findByIdAndUpdate(
-      id,
-      { $pull: { disLikes: req.user._id } },
-      { new: true },
-    );
+    const movie = await this.movieModel
+      .findByIdAndUpdate(
+        id,
+        { $pull: { disLikes: req.user._id } },
+        { new: true },
+      )
+      .populate('comments');
     return movie;
   }
 

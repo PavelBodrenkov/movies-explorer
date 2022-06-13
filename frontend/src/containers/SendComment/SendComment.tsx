@@ -1,24 +1,27 @@
-import { Button, Input, Typography } from "antd";
-import { StyledSendComment } from "./SendCommentStyle"
-import {FC} from "react";
+import {Button, Input, Typography} from "antd";
+import {StyledSendComment} from "./SendCommentStyle"
+import {FC, useContext} from "react";
+import {observer} from "mobx-react-lite";
+import {Context} from "../../index";
 
-const { TextArea } = Input;
-const { Title } = Typography;
+const {TextArea} = Input;
+const {Title} = Typography;
 
-const SendComment:FC<any> = ({handleValueComment, saveComment}) => {
+const SendComment: FC = observer(() => {
 
+    const {showMovieStore} = useContext<any>(Context);
 
-    return(
+    return (
         <StyledSendComment>
             <Title level={4}>Комментарии</Title>
-            <TextArea 
-            autoSize={{ minRows: 3, maxRows: 5 }} 
-            placeholder="Напишите комментарий"
-            onChange={(e:any) => handleValueComment(e.target.value)}
+            <TextArea
+                autoSize={{minRows: 3, maxRows: 5}}
+                placeholder="Напишите комментарий"
+                onChange={(e: any) => showMovieStore.handleValueComment(e.target.value)}
             />
-            <Button type="primary" onClick={saveComment}>Оставить комментарий</Button>
+            <Button type="primary" onClick={() => showMovieStore.saveComment()}>Оставить комментарий</Button>
         </StyledSendComment>
     )
-}
+})
 
 export default SendComment

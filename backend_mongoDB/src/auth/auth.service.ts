@@ -46,6 +46,7 @@ export class AuthService {
     return {
       token: (await this.generateToken(user)).token,
       user: {
+        id: user.id,
         name: user.name,
         email: user.email,
         favourites: user.favourites,

@@ -1,14 +1,16 @@
-import React, { createContext } from 'react';
+import React, {createContext} from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter } from "react-router-dom";
-import styled, { createGlobalStyle, css } from "styled-components";
+import {BrowserRouter} from "react-router-dom";
+import {createGlobalStyle} from "styled-components";
 import 'antd/dist/antd.css'
 import AuthStore from './store/AuthStore';
 import AccountStore from './store/AccountStore';
 import MoviesStore from './store/MoviesStore';
+import ShowMovieStore from "./store/ShowMovieStore";
+import CommentsStore from "./store/CommentsStore";
 
 const Global = createGlobalStyle`
     @font-face{
@@ -29,25 +31,38 @@ const Global = createGlobalStyle`
       color:black;
     }
 `
-export const Context = createContext(null)
+export const Context = createContext<any>(null)
 
 const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
+    document.getElementById('root') as HTMLElement
 );
+
+const authStore = new AuthStore()
+const moviesStore = new MoviesStore(authStore)
+const accountStore = new AccountStore(authStore)
+const showMovieStore = new ShowMovieStore(authStore)
+const commentsStore = new CommentsStore()
+
+const stores = {
+    authStore: authStore,
+    moviesStore: moviesStore,
+    accountStore:accountStore,
+    showMovieStore:showMovieStore,
+    commentsStore:commentsStore
+};
+
 root.render(
-  //@ts-ignore
-  <Context.Provider value={{
-    authStore: new AuthStore,
-    accountStore: new AccountStore,
-    moviesStore: new MoviesStore
-  }}>
-    <React.StrictMode>
-      <BrowserRouter>
-        <Global />
-        <App />
-      </BrowserRouter>
-    </React.StrictMode>
-  </Context.Provider>
+    //@ts-ignore
+    <Context.Provider
+    value={stores}
+    >
+        <React.StrictMode>
+            <BrowserRouter>
+                <Global/>
+                <App/>
+            </BrowserRouter>
+        </React.StrictMode>
+    </Context.Provider>
 );
 
 reportWebVitals();

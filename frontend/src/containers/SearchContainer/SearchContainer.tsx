@@ -2,19 +2,15 @@ import Container from "../../elements/Container"
 import { StyledSearchContainer } from "./SearchContainerStyles";
 import imgSearch from '../../assets/img/movies/img-search.svg';
 import { Button, Form, Switch } from "antd";
-import { FC, useEffect, useState } from "react";
+import {FC, useContext } from "react";
+import {observer} from "mobx-react-lite";
+import {Context} from "../../index";
 
 
-const SearchContainer: FC<any> = ({ searchMovies, sendSearch }) => {
 
-    const [check, setCheck] = useState({
-        text: '',
-        check: false
-    })
+const SearchContainer: FC = observer(() => {
 
-    useEffect(() => {
-        searchMovies(check)
-    }, [check])
+    const {moviesStore} = useContext<any>(Context);
 
     return (
         <StyledSearchContainer>
@@ -24,16 +20,18 @@ const SearchContainer: FC<any> = ({ searchMovies, sendSearch }) => {
                         <input
                             type='text'
                             placeholder="Фильмы"
-                            onChange={(e) => setCheck((prev) => {
-                                return {
-                                    ...prev,
-                                    text: e.target.value
-                                }
-                            })} />
+                            onChange={(e) => moviesStore.handleSearchMovies(e.target.value)}
+                            // onChange={(e) => setCheck((prev:checkProps) => {
+                            //     return {
+                            //         ...prev,
+                            //         text: e.target.value
+                            //     }
+                            // })}
+                        />
                         <Button
                             shape="circle"
                             className="search-button"
-                            onClick={sendSearch}
+                            onClick={() => moviesStore.sendSearch()}
                             htmlType='submit'
                         >
                             <img src={imgSearch} />
@@ -41,17 +39,20 @@ const SearchContainer: FC<any> = ({ searchMovies, sendSearch }) => {
                     </div>
                     <div className="container-checkbox">
                         <label>Короткометражки</label>
-                        <Switch onChange={(e) => setCheck((prev) => {
-                                return {
-                                    ...prev,
-                                    check: e
-                                }
-                            })} />
+                        <Switch
+                            onChange={(e) => moviesStore.handleCheckMovies(e)}
+                            // onChange={(e) => setCheck((prev:checkProps) => {
+                            //     return {
+                            //         ...prev,
+                            //         check: e
+                            //     }
+                            // })}
+                        />
                     </div>
                 </Form>
             </Container>
         </StyledSearchContainer>
     )
-}
+})
 
 export default SearchContainer

@@ -1,26 +1,23 @@
 import { StyledControlVideo } from "./ControlVideoStyle";
 import Icon, { CaretRightOutlined, SoundOutlined, PauseOutlined } from "@ant-design/icons";
 import { Slider } from "antd";
-import { FC } from "react";
+import {FC, useContext} from "react";
+import {observer} from "mobx-react-lite";
+import {Context} from "../../index";
 
-interface ControlVideoprops {
-  handlePlaying: () => void;
-  handleVolume: (value: number) => void;
-  play:boolean
-}
 
-const ControlVideo: FC<ControlVideoprops> = ({
-  handlePlaying,
-  handleVolume,
-  play
-}) => {
+
+const ControlVideo: FC = observer(() => {
+
+  const {showMovieStore} = useContext<any>(Context);
+
   return (
     <StyledControlVideo>
       <div className="content">
-          {play ? 
-              <PauseOutlined className="play"onClick={handlePlaying}/>
+          {showMovieStore.play ?
+              <PauseOutlined className="play"onClick={() => showMovieStore.handlePlaying()}/>
               :
-            <CaretRightOutlined className="play" onClick={handlePlaying} />
+            <CaretRightOutlined className="play" onClick={() => showMovieStore.handlePlaying()} />
         }
         
         <div className="sound_block">
@@ -32,12 +29,12 @@ const ControlVideo: FC<ControlVideoprops> = ({
             style={{ width: "50px" }}
             className="slider"
             tipFormatter={null}
-            onChange={handleVolume}
+            onChange={(e) => showMovieStore.handleVolume(e)}
           />
         </div>
       </div>
     </StyledControlVideo>
   );
-};
+});
 
 export default ControlVideo;

@@ -1,38 +1,13 @@
 import { ContainerRegisterForm, StyledRegisterForm } from "./RegisterFormStyle"
 import logo from '../../assets/img/main/logo__COLOR_main-1.svg';
-import {useContext, useState} from 'react'
-import { Form, Input, message } from "antd";
-import { Link, useNavigate } from "react-router-dom";
-import { registration } from "../../services/http/auth/auth";
+import {useContext} from 'react'
+import { Form, Input } from "antd";
+import { Link } from "react-router-dom";
 import { Context } from '../../';
 
 const RegisterForm = () => {
 
-     //@ts-ignore
-     const { authStore } = useContext(Context);
-     const [result, setResult] = useState<any>(null);
-     const navigate = useNavigate ();
-
-    const onFinish = (values: any) => {
-        registration(values)
-        .then((response) => {
-            const data = response?.data
-            if(data) {
-                localStorage.setItem('auth-token', data.token)
-                authStore.setToken(data.token)
-                authStore.setUser(data.user)
-                setResult(null)
-                navigate('/')
-                message.success('Вы успешно зарегистрировались')
-            }
-        })
-        .catch(e => {
-            if(e.response.status === 400) {
-                setResult({result:'error'})
-                message.error(e.response.data.message)
-            }
-        })
-    };
+     const { accountStore, authStore } = useContext<any>(Context);
 
     return (
         <StyledRegisterForm>
@@ -45,7 +20,7 @@ const RegisterForm = () => {
                         <h2>Добро пожаловать!</h2>
                         <Form
                             layout="vertical"
-                            onFinish={onFinish}
+                            onFinish={(values) => accountStore.handleSubmit(values, 'registration')}
                         >
                             <Form.Item 
                             label='Имя'
@@ -61,7 +36,10 @@ const RegisterForm = () => {
                             </Form.Item>
                             <Form.Item
                                 label='E-mail'
-                                validateStatus={result ? (result.result === "error" ? "error" : "success") : undefined}
+                                validateStatus={authStore.result ?
+                                    (authStore.result.result === "error" ? "error" : "success")
+                                    : undefined
+                                }
                                 name="email"
                                 rules={[
                                     {

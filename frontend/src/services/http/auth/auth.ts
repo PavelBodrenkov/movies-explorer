@@ -12,6 +12,7 @@ export const registration = async ({name, email, password}:AuthProps) => {
 }
 
 export const login = async ({name, email, password}:AuthProps) => {
+    console.log(email)
     const user = await axios.post('auth/login', {name, email, password})
     return user
 }

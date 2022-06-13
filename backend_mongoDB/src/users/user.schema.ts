@@ -14,7 +14,7 @@ export class User {
     type: String,
     required: [true, 'Поле обязательно для заполнения'],
   })
-  email: number;
+  email: string;
 
   @Prop({ type: String, required: [true, 'Поле обязательно для заполнения'] })
   password: string;

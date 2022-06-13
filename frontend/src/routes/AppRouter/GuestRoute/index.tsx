@@ -1,6 +1,6 @@
 import { observer } from "mobx-react-lite";
 import { useContext } from "react";
-import { Navigate, useLocation } from "react-router-dom";
+import { Navigate, useLocation, Outlet } from "react-router-dom";
 import { Context } from "../../..";
 
 
@@ -12,7 +12,7 @@ const GuestRoute = observer(({ children, ...rest }) => {
     const location = useLocation();
     const url = new URLSearchParams(location.search.slice(1));
   
-    return auth.user ? <Navigate to={url.get("redirect") || "/"} /> : children;
+    return authStore.user ? <Navigate to={url.get("redirect") || "/"} /> : children;
   })
   
   export default GuestRoute;

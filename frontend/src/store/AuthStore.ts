@@ -4,14 +4,28 @@ import { verifyAuth } from "../services/http/auth/auth";
 export default class AuthStore {
 
     private _isAuth: boolean;
-    private _user: null;
+    private _user: {
+        email: string
+        favourites: string[]
+        name: string
+        password: string
+        __v: number
+        _id: string
+    };
     private _token: any;
     private _isLoaded: any;
     private _result: null;
 
     constructor() {
         this._isAuth = false
-        this._user = null
+        this._user = {
+            email: '',
+            favourites: [],
+            name: '',
+            password: '',
+            __v: 0,
+            _id: '',
+        }
         this._token = null
         this._isLoaded = false
         this._result = null

@@ -1,12 +1,13 @@
-import { Button, Col, Form, Input, message, Row } from "antd"
+import { Button, Form, Input, message } from "antd"
 import { useContext, useEffect } from "react"
 import { AccountContainer, StyledAccountForm } from "./AccountFormStyle"
 import { useNavigate } from "react-router-dom";
 import { Context } from '../../';
 import { observer } from "mobx-react-lite";
 import { updateUser } from "../../services/http/users";
+import {UserProps, UsersProps} from "../../types/userTypes";
 
-const AcountForm = observer(() => {
+const AccountForm = observer(() => {
     //@ts-ignore
     const { authStore, accountStore } = useContext(Context);
     const navigate = useNavigate()
@@ -19,18 +20,18 @@ const AcountForm = observer(() => {
         navigate('/')
     }
 
-    const handleSave = (values: any) => {
+    const handleSave = (values: UsersProps) => {
         updateUser(values)
-        .then((response) => {
+        .then((response:UserProps) => {
             accountStore.setEdit(false)
             accountStore.setResult(null)
             authStore.setUser(response.data)
-            message.success('Данные сохранены')
+            message.success('Данные сохранены').then()
         })
         .catch((e) => {
             if(e?.response?.status === 409) {
                 accountStore.setResult({result:'error'})
-                message.error('Пользователь с таким Email существует')
+                message.error('Пользователь с таким Email существует').then()
             } else {
                 console.log('account' + ' ' + e);
                 
@@ -152,4 +153,4 @@ const AcountForm = observer(() => {
     )
 })
 
-export default AcountForm
+export default AccountForm

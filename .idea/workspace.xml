@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="ca103381-6323-487f-9b6b-db5d85f8eb58" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend_mongoDB/src/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend_mongoDB/src/app.module.ts" afterDir="false" />
@@ -26,6 +27,9 @@
       <change beforePath="$PROJECT_DIR$/backend_mongoDB/src/users/user.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend_mongoDB/src/users/user.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/containers/CardFilm/CardFilm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/containers/CardFilm/CardFilm.tsx" afterDir="false" />
     </list>
+=======
+    <list default="true" id="fdd09b83-c041-4b61-b1be-3763bc367557" name="Changes" comment="" />
+>>>>>>> 206596d3b5c15357896571565ab55acd413e7148
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,7 +44,11 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+<<<<<<< HEAD
   <component name="ProjectId" id="2AT2UEy2sjH5MAwko8qpAsaid5v" />
+=======
+  <component name="ProjectId" id="2AKP0IMb8jZ69dXmHCbxx01shux" />
+>>>>>>> 206596d3b5c15357896571565ab55acd413e7148
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -53,18 +61,31 @@
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="yarn" />
+<<<<<<< HEAD
     <property name="ts.external.directory.path" value="C:\Users\Pavel\Desktop\movies-explorer\backend_mongoDB\node_modules\typescript\lib" />
+=======
+    <property name="ts.external.directory.path" value="C:\Users\Pavel\Desktop\movies-explorer\frontend\node_modules\typescript\lib" />
+>>>>>>> 206596d3b5c15357896571565ab55acd413e7148
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
+<<<<<<< HEAD
       <changelist id="ca103381-6323-487f-9b6b-db5d85f8eb58" name="Changes" comment="" />
       <created>1655019268085</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1655019268085</updated>
       <workItem from="1655019269360" duration="765000" />
+=======
+      <changelist id="fdd09b83-c041-4b61-b1be-3763bc367557" name="Changes" comment="" />
+      <created>1654755079115</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1654755079115</updated>
+      <workItem from="1654755080399" duration="11978000" />
+>>>>>>> 206596d3b5c15357896571565ab55acd413e7148
     </task>
     <servers />
   </component>

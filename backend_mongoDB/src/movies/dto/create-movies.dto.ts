@@ -6,7 +6,7 @@ export class CreateMoviesDto {
   readonly description: string;
   readonly image: string;
   readonly trailer: string;
-  readonly owner: number;
+  readonly owner: string;
   readonly movieId: number;
   readonly nameRU: string;
   readonly nameEN: string;

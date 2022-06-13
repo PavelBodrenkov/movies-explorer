@@ -6,17 +6,15 @@ import { observer } from "mobx-react-lite"
 import Preloader from "../../components/UI/Preloader/Preloader"
 import { Context } from "../.."
 import MoreMovies from "../../components/UI/MoreMovies/MoreMovies"
+import {MovieProps} from "../../types/moviesTypes";
 
-const ListFilms: FC<any> = observer(({
-    submitSaveMovie,
-    films,
-    isMovieAdded,
-    flag,
-    moreMovie
-}) => {
+interface ListFilmsProps {
+    flag:string
+}
 
-    //@ts-ignore
-    const { moviesStore } = useContext(Context);
+const ListFilms: FC<ListFilmsProps> = observer(({flag}) => {
+
+    const { moviesStore } = useContext<any>(Context);
 
     return (
         <StyledSearchContainer>
@@ -27,14 +25,12 @@ const ListFilms: FC<any> = observer(({
                             ?
                             <Preloader />
                             :
-                            films !== undefined && films?.length !== 0 ?
-                                films?.map((card: any) => {
+                            moviesStore?.films !== undefined && moviesStore?.films?.length !== 0 ?
+                                moviesStore?.films?.map((card: MovieProps) => {
                                     return (
                                         <CardFilm
                                             key={card._id}
                                             card={card}
-                                            submitSaveMovie={submitSaveMovie}
-                                            isMovieAdded={isMovieAdded}
                                             flag={flag}
                                         />
                                     )
@@ -43,9 +39,9 @@ const ListFilms: FC<any> = observer(({
                                 <h2>Нет сохраненных фильмов</h2>
                     }
                 </div>
-                {films.length >= 12 && films.length < moviesStore.count &&
+                {moviesStore?.films?.length >= 12 && moviesStore?.films?.length < moviesStore?.count &&
                     <div style={{ marginTop: '50px' }}>
-                        <MoreMovies more={moreMovie} />
+                        <MoreMovies flag={flag} />
                     </div>
                 }
 

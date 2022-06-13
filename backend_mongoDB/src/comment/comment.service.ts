@@ -21,9 +21,8 @@ export class CommentService {
         movie: dto.movie,
       });
       const movie = await this.movieModel.findById(dto.movie);
-      console.log('movie', movie);
 
-      movie.comments.push(comment._id);
+      movie.comments.push(comment);
       await movie.save();
       return comment;
     } else {
@@ -32,9 +31,9 @@ export class CommentService {
         console.log('нет родителя');
       }
       const comment = await this.commentModel.create({ ...dto, owner: _id });
-      parent.children.push(comment._id);
+      parent.children.push(comment);
       await parent.save();
-      return comment;
+      return parent;
     }
   }
 

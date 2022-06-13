@@ -8,7 +8,7 @@ interface moviesProps {
      description:string;
      image:string;
      trailer:string;
-     owner:number;
+     owner:string;
      movieId:number;
      nameRU:string;
      nameEN:string;

@@ -12,9 +12,10 @@ const Header = observer(() => {
     //@ts-ignore
     const { authStore } = useContext(Context);
 
-    const [visible, setVisible] = useState(false);
+    const [visible, setVisible] = useState<boolean>(false);
     const showDrawer = () => {
         setVisible(true);
+
     };
 
     const onClose = () => {

@@ -1,36 +1,14 @@
 import { Form, Input, message } from "antd";
-import {useContext, useState} from 'react'
-import { Link, useNavigate  } from "react-router-dom";
+import {useContext} from 'react'
+import { Link } from "react-router-dom";
 import { ContainerLoginForm, StyledLoginForm } from "./LoginFormStyle";
 import logo from '../../assets/img/main/logo__COLOR_main-1.svg';
-import { login } from "../../services/http/auth/auth";
 import { observer } from "mobx-react-lite";
 import { Context } from '../../';
 
 const LoginForm = observer(() => {
 
-    //@ts-ignore
-    const { authStore } = useContext(Context);
-
-    const onFinish = (values: any) => {
-        login(values)
-        .then((response) => {
-            const data = response?.data
-            if(data) {
-                localStorage.setItem('auth-token', data.token)
-                authStore.setToken(data.token)
-                authStore.setUser(data.user)
-                authStore.setResult(null)
-                //navigate('/')
-            }
-        })
-        .catch(e => {
-            if(e.response.status === 401) {
-                authStore.setResult({result:'error'})
-                message.error(e.response.data.message)
-            }
-        })
-    };
+    const { accountStore, authStore } = useContext<any>(Context);
 
     return(
         <StyledLoginForm>
@@ -43,7 +21,7 @@ const LoginForm = observer(() => {
                         <h2>Рады видеть!</h2>
                         <Form
                             layout="vertical"
-                            onFinish={onFinish}
+                            onFinish={(values) => accountStore.handleSubmit(values, 'login')}
                             autoComplete="off"
                         >
                             <Form.Item
