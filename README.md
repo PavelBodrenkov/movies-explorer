@@ -12,16 +12,6 @@
 - Лайки
 - Комментарии
 
-###В Аккаунте изменение данных пользователя
-- email
-- имя
-
-###Бэкенд
-- Nest.js
-- mongoDB
-- mongoose
-- swager
-
 ### В Аккаунте изменение данных пользователя
  - email
  - имя
@@ -41,11 +31,6 @@
 - Скачайте репо
 - npm install || yarn
 - npm start || yarn start
-
-###Backend
-- Скачайте репо
-- npm install || yarn
-- npm start:dev || yarn start:dev
 
 ### Бэкенд
  - Nest.js
