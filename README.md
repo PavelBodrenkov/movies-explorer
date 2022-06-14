@@ -38,7 +38,7 @@
  - mongoose
  - swager
 
-### start:dev
+### start
 - Скачайте репо
 - npm install || yarn
 - npm start:dev || yarn start:dev
