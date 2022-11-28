@@ -36,7 +36,7 @@
  - Nest.js
  - mongoDB
  - mongoose
- - swager
+ - swagger
 
 ### start
 - Скачайте репо
